@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>💻 System Insight Dashboard Monitor</h1>
+
+<input id="search" placeholder="Search process...">
+
+<div class="cards">
+    <div class="card">
+        <h3>CPU</h3>
+        <p id="cpu">0%</p>
+        <div class="bar"><div id="cpuBar" class="fill"></div></div>
+    </div>
+
+    <div class="card">
+        <h3>Memory</h3>
+        <p id="memory">0%</p>
+        <div class="bar"><div id="memBar" class="fill"></div></div>
+    </div>
+</div>
+
+<div class="chart-container">
+    <canvas id="cpuChart"></canvas>
+</div>
+
+<h2>Processes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>CPU</th>
+            <th>Memory</th>
+            <th>State</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="processTable"></tbody>
+</table>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
